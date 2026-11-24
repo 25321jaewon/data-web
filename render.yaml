@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: travelcock
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: TOUR_API_KEY
+        sync: false
