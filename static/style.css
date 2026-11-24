@@ -1,0 +1,136 @@
+/* 전체 기본 설정 */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fc;
+    color: #263445;
+}
+
+/* 상단 헤더 */
+header {
+    background: linear-gradient(120deg, #2878d0, #55a6e8);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+}
+header h1 { font-size: 36px; margin: 0; }
+header p { margin-bottom: 0; font-size: 15px; }
+
+/* 메인 검색 영역 */
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: #e5f2ff;
+}
+.hero h2 { font-size: 32px; margin-bottom: 12px; }
+.hero p { color: #60758b; }
+.search-box { margin-top: 28px; }
+.search-box input {
+    width: 350px;
+    max-width: 65%;
+    padding: 15px;
+    border: 1px solid #cbd8e5;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.search-box button {
+    padding: 15px 23px;
+    background: #2878d0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.search-box button:hover { background: #185da9; }
+
+/* 여행지 영역 */
+.recommend { padding: 45px 7%; }
+.recommend h2 { font-size: 27px; text-align: center; }
+.section-description {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 35px;
+}
+
+/* 관광지 카드 배치 */
+.regions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.13);
+}
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+.no-image {
+    height: 190px;
+    background: #e5f2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+.no-image p { font-size: 14px; color: #718096; }
+.card-content { padding: 18px; }
+.card-content h3 {
+    font-size: 19px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.address { font-size: 13px; color: #68798b; line-height: 1.5; }
+.category {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #e5f2ff;
+    color: #2878d0;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* 오류 및 검색 결과 안내 */
+.message {
+    text-align: center;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    color: #64748b;
+}
+
+/* 하단 */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #263445;
+    color: white;
+    margin-top: 40px;
+}
+footer p { margin: 5px; }
+
+/* 모바일 화면 */
+@media (max-width: 600px) {
+    .hero h2 { font-size: 25px; }
+    .search-box input {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .search-box button { width: 100%; }
+    .recommend { padding: 30px 18px; }
+}
